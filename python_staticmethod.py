@@ -9,20 +9,6 @@ class Employee:
         self.email = first + '.' + last + '@company.com'
         Employee.number_employee += 1
 
-    def get_fullname(self):
-        return ("{} {} ".format(self.first, self.last))
-
-    def apply_raise(self):
-        self.pay = int(self.pay * self.raise_amout)
-
-    @classmethod
-    def set_raise_amount(cls, amount):
-        cls.raise_amout = amount
-
-    @classmethod
-    def from_string(cls, emp_str):
-        first, last, pay = emp_str.split('-')
-        return cls(first, last, pay)
     @staticmethod
     def is_workday(day):
         if day.weekday() ==5 or day.weekday() == 6:
