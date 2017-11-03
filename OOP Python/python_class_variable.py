@@ -18,9 +18,14 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amout)
 
+    def __repr__(self):
+        return "Employee ('{}', '{}', '{}', '{}')"  .format(self.first, self.last, self.email, self.pay)
 
+    def __str__(self):
+        return "Employee ('{}' - '{}')"  .format(self.first, self.last)
 emp_1 = Employee("Ibrahima", "Fofana", 3000)
 emp_2 = Employee("Salimou", "Fofana", 2000)
+print(emp_1)
 print("-------------------------")
 print(emp_1.get_fullname())
 print(emp_2.get_fullname())
